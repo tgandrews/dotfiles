@@ -95,5 +95,6 @@ alias gf='git fetch -p && git pull'
 alias gd='git diff `git status -s |grep -v ^\ D |grep -v .*min\.css |cut -b4-`'
 alias gdc='git diff --cached `git status -s |grep -v ^\ D |grep -v .*min\.css |cut -b4-`'
 alias gco='git checkout'
+alias grmu=$'gs | grep \'??\' | awk -F \' \' \'{ print "rm -rf "$2 }\' | bash'
 
 nvm use node
