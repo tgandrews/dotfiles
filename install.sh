@@ -29,3 +29,9 @@ for file in $files; do
     echo "Creating symlink to $file in home directory."
     ln -s $dir/$file ~/.$file
 done
+
+echo "Handling special files"
+echo "Moving ~/.atom/packages.cson to $olddir"
+mv ~/.atom/packages.cson $olddir/
+echo "Creating symlink to ~/.atom/packages.cson in home directory"
+ln -s $dir/packages.cson ~/.atom/packages.cson

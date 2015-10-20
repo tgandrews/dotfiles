@@ -1,0 +1,10 @@
+packages: [
+  "atom-beautify"
+  "close-after-last-tab"
+  "git-blame"
+  "linter"
+  "linter-eslint"
+  "linter-scss-lint"
+  "package-sync"
+  "react"
+]
