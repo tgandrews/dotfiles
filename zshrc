@@ -54,7 +54,7 @@ plugins=(git npm)
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/local/sbin:$HOME/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
+export PATH="$HOME/.rvm/bin:/usr/local/bin:/usr/local/sbin:$HOME/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -94,11 +94,10 @@ alias gc='git commit'
 alias ga='git add'
 alias gf='git fetch -p && git pull'
 alias gd='git diff'
-alias gdc='git diff --cached `git status -s |grep -v ^\ D |grep -v .*min\.css |cut -b4-`'
+alias gdc='git diff --cached'
 alias gco='git checkout'
 alias grmu=$'gs | grep \'??\' | awk -F \' \' \'{ print "rm -rf "$2 }\' | bash'
 alias gl='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
 
-export PATH="$PATH:$HOME/.rvm/bin"
-
+rvm use default
 nvm use node
