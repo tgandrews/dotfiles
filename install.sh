@@ -8,7 +8,7 @@
 
 dir=~/src/dotfiles                    # dotfiles directory
 olddir=~/src/dotfiles/backup             # old dotfiles backup directory
-files="zshrc gitconfig"    # list of files/folders to symlink in homedir
+files="zshrc gitconfig rvmrc"    # list of files/folders to symlink in homedir
 
 ##########
 
