@@ -1,5 +1,6 @@
 packages: [
   "atom-beautify"
+  "atom-easy-jsdoc"
   "close-after-last-tab"
   "git-blame"
   "linter"

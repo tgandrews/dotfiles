@@ -33,5 +33,6 @@ done
 echo "Handling special files"
 echo "Moving ~/.atom/packages.cson to $olddir"
 mv ~/.atom/packages.cson $olddir/
+rm ~/.atom/packages.cson
 echo "Creating symlink to ~/.atom/packages.cson in home directory"
 ln -s $dir/packages.cson ~/.atom/packages.cson
