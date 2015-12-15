@@ -2,6 +2,7 @@ packages: [
   "atom-beautify"
   "atom-easy-jsdoc"
   "close-after-last-tab"
+  "editorconfig"
   "git-blame"
   "linter"
   "linter-eslint"
