@@ -55,8 +55,8 @@ plugins=(git npm)
 # User configuration
 
 export PATH="$HOME/.rvm/bin:/usr/local/bin:/usr/local/sbin:$HOME/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
-# export MANPATH="/usr/local/man:$MANPATH"
 
+# export MANPATH="/usr/local/man:$MANPATH"
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
@@ -87,6 +87,19 @@ source $ZSH/oh-my-zsh.sh
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 
+[[ -s "/Users/tgandrews/.gvm/scripts/gvm" ]] && source "/Users/tgandrews/.gvm/scripts/gvm"
+
+# Cargo for rust installed tools
+export PATH="$PATH:$HOME/.cargo/bin"
+
+# For racer (rust autocomplete)
+export RUST_SRC_PATH="$HOME/src/rust/src"
+
+# Golang
+gvm use go1.6
+export GOPATH="$HOME/src"
+export PATH="$PATH:$GOPATH/bin"
+
 export EDITOR='atom'
 
 alias gs='git status -s'
@@ -98,6 +111,7 @@ alias gdc='git diff --cached'
 alias gco='git checkout'
 alias grmu=$'gs | grep \'??\' | awk -F \' \' \'{ print "rm -rf "$2 }\' | bash'
 alias gl='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
+alias grmb='git branch --merged | grep -v "\*" | grep -v master | grep -v dev | xargs -n 1 git branch -d'
 
 rvm use default
 nvm use node
