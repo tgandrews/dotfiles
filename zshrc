@@ -119,3 +119,9 @@ alias grmb='git branch --merged | grep -v "\*" | grep -v master | grep -v dev | 
 
 rvm use default
 nvm use node
+
+# The next line updates PATH for the Google Cloud SDK.
+source '/Users/tgandrews/google-cloud-sdk/path.zsh.inc'
+
+# The next line enables shell command completion for gcloud.
+source '/Users/tgandrews/google-cloud-sdk/completion.zsh.inc'
