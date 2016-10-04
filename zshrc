@@ -118,7 +118,7 @@ alias gl='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %
 alias grmb='git branch --merged | grep -v "\*" | grep -v master | grep -v dev | xargs -n 1 git branch -d'
 
 rvm use default
-nvm use node
+nvm use default
 
 # The next line updates PATH for the Google Cloud SDK.
 source '/Users/tgandrews/google-cloud-sdk/path.zsh.inc'
