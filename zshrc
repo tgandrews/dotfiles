@@ -54,7 +54,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git npm)
+plugins=(git npm yarn)
 
 # User configuration
 
@@ -109,7 +109,7 @@ export EDITOR='atom'
 alias gs='git status -s'
 alias gc='git commit'
 alias ga='git add'
-alias gf='git fetch -p && git pull'
+alias gf='git fetch -p && git pull --rebase'
 alias gd='git diff'
 alias gdc='git diff --cached'
 alias gco='git checkout'
