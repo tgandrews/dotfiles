@@ -3,9 +3,8 @@
 	email = git@tomandrews.co.uk
 [push]
 	default = simple
-[alias]
-	clean-local = ! git branch --merged | grep -iv \"\\*\" | grep -iv \"master\" | xargs -n 1 git branch -d
 [merge]
 	tool = kdiff3
 [core]
 	editor = atom --wait
+	excludesfiles = /Users/tgandrews/.gitignore_global
