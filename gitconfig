@@ -1,6 +1,7 @@
 [user]
 	name = Tom Andrews
 	email = git@tomandrews.co.uk
+	signingkey = 6A742BF53314EDA5
 [push]
 	default = simple
 [merge]
@@ -8,3 +9,5 @@
 [core]
 	editor = atom --wait
 	excludesfile = /Users/tgandrews/.gitignore_global
+[commit]
+	gpgsign = true
