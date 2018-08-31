@@ -7,4 +7,4 @@
 	tool = kdiff3
 [core]
 	editor = atom --wait
-	excludesfiles = /Users/tgandrews/.gitignore_global
+	excludesfile = /Users/tgandrews/.gitignore_global
