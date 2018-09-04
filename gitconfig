@@ -1,7 +1,7 @@
 [user]
 	name = Tom Andrews
 	email = git@tomandrews.co.uk
-	signingkey = 6A742BF53314EDA5
+	signingkey = 298820FAB2B4E7E4
 [push]
 	default = simple
 [merge]

@@ -42,19 +42,6 @@ load-nvmrc() {
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
 
-[[ -s "/Users/tgandrews/.gvm/scripts/gvm" ]] && source "/Users/tgandrews/.gvm/scripts/gvm"
-
-# Cargo for rust installed tools
-export PATH="$PATH:$HOME/.cargo/bin"
-
-# For racer (rust autocomplete)
-export RUST_SRC_PATH="$HOME/src/rust/src"
-
-# Golang
-gvm use go1.6
-export GOPATH="$HOME/src"
-export PATH="$PATH:$GOPATH/bin"
-
 export EDITOR='atom'
 
 alias gs='git status -s'
@@ -70,15 +57,6 @@ alias grmb='git branch --merged | grep -v "\*" | grep -v master | grep -v dev | 
 alias grmbr=$'git branch -vv | awk \'{print $1,$4}\' | grep \'gone]\' | awk \'{print $1}\' | xargs -n 1 git branch -D'
 alias ll='ls -lah'
 
-rvm use default
 nvm use default
 
-# The next line updates PATH for the Google Cloud SDK.
-source '/Users/tgandrews/google-cloud-sdk/path.zsh.inc'
-
-# The next line enables shell command completion for gcloud.
-source '/Users/tgandrews/google-cloud-sdk/completion.zsh.inc'
-
 export PATH=$PATH:/Users/tgandrews/bin
-
-source '/Users/tgandrews/lib/azure-cli/az.completion'
