@@ -8,7 +8,7 @@
 
 dir=~/src/dotfiles                    # dotfiles directory
 olddir=~/src/dotfiles/backup             # old dotfiles backup directory
-files="zshrc gitconfig rvmrc"    # list of files/folders to symlink in homedir
+files="zshrc gitconfig"    # list of files/folders to symlink in homedir
 
 ##########
 
@@ -29,10 +29,3 @@ for file in $files; do
     echo "Creating symlink to $file in home directory."
     ln -s $dir/$file ~/.$file
 done
-
-echo "Handling special files"
-echo "Moving ~/.atom/packages.cson to $olddir"
-mv ~/.atom/packages.cson $olddir/
-rm ~/.atom/packages.cson
-echo "Creating symlink to ~/.atom/packages.cson in home directory"
-ln -s $dir/packages.cson ~/.atom/packages.cson

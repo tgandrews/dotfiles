@@ -1,4 +1,3 @@
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -12,7 +11,7 @@ plugins=(git npm yarn)
 
 # User configuration
 
-export PATH="$HOME/.rvm/bin:/usr/local/bin:/usr/local/sbin:$HOME/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
+export PATH="$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
 
 # export MANPATH="/usr/local/man:$MANPATH"
 source $ZSH/oh-my-zsh.sh
@@ -59,5 +58,3 @@ alias grmbr=$'git branch -vv | awk \'{print $1,$4}\' | grep \'gone]\' | awk \'{p
 alias ll='ls -lah'
 
 nvm use default
-
-export PATH=$PATH:/Users/tgandrews/bin
