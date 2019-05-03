@@ -42,7 +42,7 @@ load-nvmrc() {
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
 
-export EDITOR='atom'
+export EDITOR='code --wait'
 
 alias gs='git status -s'
 alias gc='git commit'

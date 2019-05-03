@@ -7,7 +7,7 @@
 [merge]
 	tool = kdiff3
 [core]
-	editor = atom --wait
+	editor = $EDITOR
 	excludesfile = /Users/tgandrews/.gitignore_global
 [commit]
 	gpgsign = true
