@@ -2,7 +2,7 @@
 export ZSH="$HOME/.oh-my-zsh"
 
 precmd() {
-    eval 'if [ "$(id -u)" -ne 0 ]; then echo "$(date "+%Y-%m-%d.%H:%M:%S") $(pwd) $(history | tail -n 1)" >>! ~/Dropbox/logs/bash/laptop/bash-history-$(date "+%Y-%m-%d").log; fi'
+    eval 'if [ "$(id -u)" -ne 0 ]; then echo "$(date "+%Y-%m-%d.%H:%M:%S") $(pwd) $(history | tail -n 1)" >>! ~/Dropbox\ \(TG\ Andrews\ Limited\)/logs/bash/laptop/bash-history-$(date "+%Y-%m-%d").log; fi'
 }
 
 ZSH_THEME="robbyrussell"
@@ -58,3 +58,9 @@ alias grmbr=$'git branch -vv | awk \'{print $1,$4}\' | grep \'gone]\' | awk \'{p
 alias ll='ls -lah'
 
 nvm use default
+# tabtab source for packages
+# uninstall by removing these lines
+[[ -f ~/.config/tabtab/__tabtab.zsh ]] && . ~/.config/tabtab/__tabtab.zsh || true
+
+export GEM_HOME=$HOME/.gem
+export PATH=$GEM_HOME/.bin/:$PATH
