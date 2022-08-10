@@ -61,6 +61,6 @@ nvm use default
 # tabtab source for packages
 # uninstall by removing these lines
 [[ -f ~/.config/tabtab/__tabtab.zsh ]] && . ~/.config/tabtab/__tabtab.zsh || true
-
+[[ -f ~/secrets.sh ]] && . ~/secrets.sh || true
 export GEM_HOME=$HOME/.gem
 export PATH=$GEM_HOME/.bin/:$PATH

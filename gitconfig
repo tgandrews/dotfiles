@@ -4,8 +4,11 @@
 	signingkey = 95049ADDB07F5725
 [push]
 	default = simple
+	autoSetupRemote = true
 [merge]
-	tool = kdiff3
+	tool = vscode
+[mergetool "vscode"]
+	cmd = code --wait $MERGED
 [core]
 	editor = $EDITOR
 	excludesfile = /Users/tgandrews/.gitignore_global
