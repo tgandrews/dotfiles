@@ -9,12 +9,11 @@ ZSH_THEME="robbyrussell"
 
 plugins=(git npm yarn)
 
-# User configuration
-
-export PATH="$HOME/bin:/opt/homebrew/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
-
 # Secrets
-export NPM_TOKEN=$(op item get "NPM Home Token" --fields credential)
+[[ -f ~/.secrets.zsh ]] && . ~/.secrets.zsh || true
+
+# User configuration
+export PATH="$HOME/bin:/opt/homebrew/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
 
 # export MANPATH="/usr/local/man:$MANPATH"
 source $ZSH/oh-my-zsh.sh
@@ -66,3 +65,8 @@ nvm use default
 [[ -f ~/.config/tabtab/__tabtab.zsh ]] && . ~/.config/tabtab/__tabtab.zsh || true
 export GEM_HOME=$HOME/.gem
 export PATH=$GEM_HOME/.bin/:$PATH
+
+# Pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
