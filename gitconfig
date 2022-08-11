@@ -1,7 +1,7 @@
 [user]
 	name = Tom Andrews
 	email = git@tomandrews.co.uk
-	signingkey = 95049ADDB07F5725
+	signingkey = 9DEE67053349208E
 [push]
 	default = simple
 	autoSetupRemote = true

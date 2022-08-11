@@ -11,7 +11,10 @@ plugins=(git npm yarn)
 
 # User configuration
 
-export PATH="$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
+export PATH="$HOME/bin:/opt/homebrew/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
+
+# Secrets
+export NPM_TOKEN=$(op item get "NPM Home Token" --fields credential)
 
 # export MANPATH="/usr/local/man:$MANPATH"
 source $ZSH/oh-my-zsh.sh
@@ -61,6 +64,5 @@ nvm use default
 # tabtab source for packages
 # uninstall by removing these lines
 [[ -f ~/.config/tabtab/__tabtab.zsh ]] && . ~/.config/tabtab/__tabtab.zsh || true
-[[ -f ~/secrets.sh ]] && . ~/secrets.sh || true
 export GEM_HOME=$HOME/.gem
 export PATH=$GEM_HOME/.bin/:$PATH
