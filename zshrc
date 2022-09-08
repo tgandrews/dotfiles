@@ -10,7 +10,7 @@ ZSH_THEME="robbyrussell"
 plugins=(git npm yarn)
 
 # Secrets
-[[ -f ~/.secrets.zsh ]] && . ~/.secrets.zsh || true
+[[ -f ~/.secrets.sh ]] && . ~/.secrets.sh || true
 
 # User configuration
 export PATH="$HOME/bin:/opt/homebrew/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
