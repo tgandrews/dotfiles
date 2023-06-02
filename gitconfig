@@ -11,8 +11,11 @@
 	cmd = code --wait $MERGED
 [core]
 	editor = $EDITOR
-	excludesfile = /Users/tgandrews/.gitignore_global
+	excludesfile = /Users/tomandrews/.gitignore_global
+	fsmonitor = true
 [commit]
 	gpgsign = true
 [init]
 	defaultBranch = main
+[feature]
+	manyFiles = true
