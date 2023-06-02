@@ -58,6 +58,8 @@ alias gl='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %
 alias grmb='git branch --merged | grep -v "\*" | grep -v master | grep -v dev | xargs -n 1 git branch -d'
 alias grmbr=$'git branch -vv | awk \'{print $1,$4}\' | grep \'gone]\' | awk \'{print $1}\' | xargs -n 1 git branch -D'
 alias ll='ls -lah'
+alias pr='gh pr view $(git branch --show-current) --json title,url,additions,deletions,headRepository --template ":pr: [{{.headRepository.name}}] {{.title}} (+{{.additions}} -{{.deletions}})
+:pr-arrow: {{.url}}" | pbcopy'
 
 nvm use default
 # tabtab source for packages
