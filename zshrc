@@ -21,6 +21,9 @@ source $ZSH/oh-my-zsh.sh
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 
+# Use the default node version
+nvm use default
+
 # Auto .nvmrc
 autoload -U add-zsh-hook
 load-nvmrc() {
@@ -61,14 +64,21 @@ alias ll='ls -lah'
 alias pr='gh pr view $(git branch --show-current) --json title,url,additions,deletions,headRepository --template ":pr: [{{.headRepository.name}}] {{.title}} (+{{.additions}} -{{.deletions}})
 :pr-arrow: {{.url}}" | pbcopy'
 
-nvm use default
 # tabtab source for packages
 # uninstall by removing these lines
 [[ -f ~/.config/tabtab/__tabtab.zsh ]] && . ~/.config/tabtab/__tabtab.zsh || true
-export GEM_HOME=$HOME/.gem
-export PATH=$GEM_HOME/.bin/:$PATH
+
+if [ -d "/opt/homebrew/opt/ruby/bin" ]; then
+  export PATH=/opt/homebrew/opt/ruby/bin:$PATH
+  export PATH=`gem environment gemdir`/bin:$PATH
+fi
 
 # Pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+
+# Andorid SDK
+export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
+export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
