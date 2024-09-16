@@ -7,7 +7,7 @@ precmd() {
 
 ZSH_THEME="robbyrussell"
 
-plugins=(gitfast npm yarn)
+plugins=(gitfast brew npm yarn)
 
 # Secrets
 [[ -f ~/.secrets.sh ]] && . ~/.secrets.sh || true
