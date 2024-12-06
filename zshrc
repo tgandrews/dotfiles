@@ -7,6 +7,8 @@ precmd() {
 
 ZSH_THEME="robbyrussell"
 
+zstyle ':omz:alpha:lib:git' async-prompt no
+
 plugins=(gitfast brew npm yarn)
 
 # Secrets
@@ -51,10 +53,12 @@ export EDITOR='code --wait'
 alias gs='git status -s'
 alias gc='git commit'
 alias ga='git add'
+alias gaa='git add .'
 alias gf='git fetch -p --tags && git pull --rebase'
 alias gd='git diff'
 alias gdc='git diff --cached'
 alias gco='git checkout'
+alias gp='git push'
 alias gpf='git push --force-with-lease'
 alias grmu=$'gs | grep \'??\' | awk -F \' \' \'{ print "rm -rf "$2 }\' | bash'
 alias gl='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
