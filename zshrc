@@ -64,6 +64,7 @@ alias grmu=$'gs | grep \'??\' | awk -F \' \' \'{ print "rm -rf "$2 }\' | bash'
 alias gl='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
 alias grmb='git branch --merged | grep -v "\*" | grep -v master | grep -v dev | xargs -n 1 git branch -d'
 alias grmbr=$'git branch -vv | awk \'{print $1,$4}\' | grep \'gone]\' | awk \'{print $1}\' | xargs -n 1 git branch -D'
+alias code='open -b com.microsoft.VSCode'
 alias ll='ls -lah'
 alias pr='gh pr view $(git branch --show-current) --json title,url,additions,deletions,headRepository --template ":pr: [{{.headRepository.name}}] {{.title}} (+{{.additions}} -{{.deletions}})
 :pr-arrow: {{.url}}" | pbcopy'
@@ -71,6 +72,10 @@ alias pr='gh pr view $(git branch --show-current) --json title,url,additions,del
 # tabtab source for packages
 # uninstall by removing these lines
 [[ -f ~/.config/tabtab/__tabtab.zsh ]] && . ~/.config/tabtab/__tabtab.zsh || true
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$(brew --prefix)/opt/nvm/nvm.sh" ] && . "$(brew --prefix)/opt/nvm/nvm.sh" # This loads nvm
+[ -s "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm" ] && . "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion
 
 if [ -d "/opt/homebrew/opt/ruby/bin" ]; then
   export PATH=/opt/homebrew/opt/ruby/bin:$PATH
